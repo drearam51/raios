@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAIOS FASE II</title>
+    <!-- ENLACES CORREGIDOS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* slate-50 */
+            color: #0f172a; /* slate-900 */
+        }
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .scroll-reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #4f46e5, #0ea5e9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-sm z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-bold text-slate-800">RAIOS</h1>
+            <nav class="hidden md:flex space-x-6 lg:space-x-8 text-sm lg:text-base">
+                <a href="#diagrama-evolucion" class="text-slate-600 hover:text-indigo-600 transition-colors">Diagrama Proceso</a>
+                <a href="#recap" class="text-slate-600 hover:text-indigo-600 transition-colors">Éxito Fase I</a>
+                <a href="#evolucion" class="text-slate-600 hover:text-indigo-600 transition-colors">Impacto</a>
+                <a href="#desafios" class="text-slate-600 hover:text-indigo-600 transition-colors">Desafíos</a>
+                <a href="#roi" class="text-slate-600 hover:text-indigo-600 transition-colors">ROI Fase II</a>
+                <a href="#inversion" class="text-slate-600 hover:text-indigo-600 transition-colors">Inversión</a>
+                <a href="#roadmap" class="text-slate-600 hover:text-indigo-600 transition-colors">Roadmap</a>
+            </nav>
+            <a href="#cta" class="bg-indigo-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-indigo-700 transition-transform hover:scale-105">Siguientes Pasos</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="h-screen flex items-center justify-center bg-white">
+            <div class="text-center px-6">
+                <div class="scroll-reveal">
+                    <h2 class="text-5xl md:text-7xl font-black mb-4">
+                        <span class="gradient-text">RAIOS Fase II:</span> La Próxima Evolución
+                    </h2>
+                    <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto">
+                        Una propuesta estratégica para transformar RAIOS en una plataforma global, escalable e inteligente, capitalizando el éxito rotundo de la Fase I.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- NUEVA SECCIÓN DE DIAGRAMA DE PROCESO -->
+        <section id="diagrama-evolucion" class="py-20 bg-white border-t border-slate-200">
+            <div class="container mx-auto px-6">
+                <div class="scroll-reveal text-center max-w-6xl mx-auto">
+                    <h3 class="text-4xl font-bold mb-4">Evolución del Proceso</h3>
+                    <p class="text-slate-600 mb-12 max-w-3xl mx-auto">Un vistazo a la arquitectura de procesos y cómo RAIOS ha transformado el flujo de trabajo, desde un proceso manual (Pre-2019) hasta la visión de la Fase II.</p>
+                    <div class="bg-white p-4 sm:p-8 rounded-xl shadow-2xl border border-slate-200">
+                        <img src="images/evolucion.png" alt="Diagrama de evolución del proceso RAIOS" class="w-full h-auto rounded-lg">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resumen Fase 1 -->
+        <section id="recap" class="py-20 bg-slate-100">
+            <div class="container mx-auto px-6">
+                <div class="scroll-reveal text-center max-w-3xl mx-auto">
+                    <h3 class="text-4xl font-bold mb-4">El Valor Comprobado de la Fase I</h3>
+                    <p class="text-slate-600 mb-12">La primera fase entregó beneficios tangibles que impactaron positivamente en la operación y generaron un retorno de inversión casi inmediato.</p>
+                </div>
+                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="scroll-reveal bg-white p-8 rounded-xl shadow-md card-hover transition-all duration-300">
+                        <div class="flex items-center mb-4"><i class="fas fa-cogs text-3xl text-purple-500 mr-4"></i><h4 class="text-xl font-bold text-slate-800">Automatización</h4></div>
+                        <p class="text-slate-600">Agilizamos procesos clave, reduciendo significativamente el esfuerzo manual y la probabilidad de errores.</p>
+                    </div>
+                    <div class="scroll-reveal bg-white p-8 rounded-xl shadow-md card-hover transition-all duration-300" style="transition-delay: 100ms;">
+                        <div class="flex items-center mb-4"><i class="fas fa-hand-holding-usd text-3xl text-green-500 mr-4"></i><h4 class="text-xl font-bold text-slate-800">Reducción de Costos</h4></div>
+                        <p class="text-slate-600">Disminuimos los gastos operativos al optimizar flujos de trabajo, mejorando directamente la rentabilidad.</p>
+                    </div>
+                    <div class="scroll-reveal bg-white p-8 rounded-xl shadow-md card-hover transition-all duration-300" style="transition-delay: 200ms;">
+                        <div class="flex items-center mb-4"><i class="fas fa-file-invoice text-3xl text-red-500 mr-4"></i><h4 class="text-xl font-bold text-slate-800">Generador de Reportes</h4></div>
+                        <p class="text-slate-600">Permitimos la creación de documentos y resúmenes de forma rápida y sencilla, ahorrando tiempo valioso.</p>
+                    </div>
+                    <div class="scroll-reveal bg-white p-8 rounded-xl shadow-md card-hover transition-all duration-300" style="transition-delay: 300ms;">
+                        <div class="flex items-center mb-4"><i class="fas fa-shipping-fast text-3xl text-green-600 mr-4"></i><h4 class="text-xl font-bold text-slate-800">Entregas Confiables</h4></div>
+                        <p class="text-slate-600">Mejoramos la fiabilidad de las entregas gracias a la gestión de un inventario siempre preciso y actualizado.</p>
+                    </div>
+                    <div class="scroll-reveal bg-white p-8 rounded-xl shadow-md card-hover transition-all duration-300" style="transition-delay: 400ms;">
+                        <div class="flex items-center mb-4"><i class="fas fa-mouse-pointer text-3xl text-yellow-500 mr-4"></i><h4 class="text-xl font-bold text-slate-800">Interfaz Amigable</h4></div>
+                        <p class="text-slate-600">Implementamos un diseño fácil de navegar que ha mejorado la experiencia y la adopción por parte de los usuarios.</p>
+                    </div>
+                    <div class="scroll-reveal bg-white p-8 rounded-xl shadow-md card-hover transition-all duration-300" style="transition-delay: 500ms;">
+                        <div class="flex items-center mb-4"><i class="fas fa-cloud text-3xl text-blue-500 mr-4"></i><h4 class="text-xl font-bold text-slate-800">Acceso en Línea</h4></div>
+                        <p class="text-slate-600">Proporcionamos acceso conveniente a la plataforma desde cualquier lugar con conexión a internet.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tablero de Impacto: Evolución -->
+        <section id="evolucion" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="scroll-reveal text-center max-w-3xl mx-auto">
+                    <h3 class="text-4xl font-bold mb-4">Tablero de Impacto: La Evolución del Proceso</h3>
+                    <p class="text-slate-600 mb-16">La transformación radical del proceso de conciliación de inventarios a lo largo de los años.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- 2015-2016 -->
+                    <div class="scroll-reveal bg-slate-50 p-6 rounded-xl border-l-4 border-gray-300 flex flex-col">
+                        <p class="font-bold text-gray-500">2015 - 2016</p>
+                        <h4 class="text-lg font-bold text-slate-800 mt-2 mb-3">Proceso Manual</h4>
+                        <p class="text-slate-600 text-sm flex-grow">El inventario se manejaba manually con un archivo de Excel. Se requerían habilidades avanzadas en la herramienta.</p>
+                        <div class="mt-4 pt-4 border-t border-gray-200">
+                            <p class="text-sm font-semibold text-slate-700">Tiempo de Ejecución:</p>
+                            <p class="text-2xl font-bold text-red-500">3 Días</p>
+                        </div>
+                    </div>
+                    <!-- 2017-2019 -->
+                    <div class="scroll-reveal bg-slate-50 p-6 rounded-xl border-l-4 border-yellow-400 flex flex-col" style="transition-delay: 150ms;">
+                        <p class="font-bold text-yellow-600">2017 - 2019</p>
+                        <h4 class="text-lg font-bold text-slate-800 mt-2 mb-3">Semi-Automatización</h4>
+                        <p class="text-slate-600 text-sm flex-grow">Se implementan macros con Google Apps Scripts para realizar cálculos primarios, reduciendo el tiempo de ejecución.</p>
+                        <div class="mt-4 pt-4 border-t border-gray-200">
+                            <p class="text-sm font-semibold text-slate-700">Tiempo de Ejecución:</p>
+                            <p class="text-2xl font-bold text-yellow-500">12.75 Horas</p>
+                        </div>
+                    </div>
+                    <!-- 2019 -->
+                    <div class="scroll-reveal bg-indigo-50 p-6 rounded-xl border-l-4 border-indigo-500 flex flex-col" style="transition-delay: 300ms;">
+                        <p class="font-bold text-indigo-600">2019 - 2024</p>
+                        <h4 class="text-lg font-bold text-slate-800 mt-2 mb-3">RAIOS Fase I</h4>
+                        <p class="text-slate-600 text-sm flex-grow">Desarrollo de RAIOS, estandarizando y automatizando el proceso de conciliación para una eficiencia drástica.</p>
+                        <div class="mt-4 pt-4 border-t border-gray-200">
+                            <p class="text-sm font-semibold text-slate-700">Tiempo de Ejecución:</p>
+                            <p class="text-2xl font-bold text-indigo-600">0.5 Horas</p>
+                        </div>
+                    </div>
+                    <!-- 2025 -->
+                    <div class="scroll-reveal bg-green-50 p-6 rounded-xl border-l-4 border-green-500 flex flex-col" style="transition-delay: 450ms;">
+                        <p class="font-bold text-green-600">2025</p>
+                        <h4 class="text-lg font-bold text-slate-800 mt-2 mb-3">Migración a la Nube</h4>
+                        <p class="text-slate-600 text-sm flex-grow">RAIOS es migrado a la nube, garantizando escalabilidad, accesibilidad global y seguridad de la información.</p>
+                        <div class="mt-4 pt-4 border-t border-gray-200">
+                            <p class="text-sm font-semibold text-slate-700">Beneficios Clave:</p>
+                            <p class="text-lg font-bold text-green-600">Plataforma Robusta</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Desafíos y Soluciones -->
+        <section id="desafios" class="py-20 bg-slate-100">
+            <div class="container mx-auto px-6">
+                <div class="scroll-reveal text-center max-w-3xl mx-auto">
+                    <h3 class="text-4xl font-bold mb-4">Del Desafío a la Oportunidad</h3>
+                    <p class="text-slate-600 mb-12">La Fase II está diseñada para convertir las limitaciones actuales en ventajas competitivas, preparando a RAIOS para un futuro global e inteligente.</p>
+                </div>
+                <div class="bg-white p-8 md:p-12 rounded-xl shadow-lg max-w-6xl mx-auto">
+                    <div class="grid md:grid-cols-2 gap-x-12 gap-y-8">
+                        <div>
+                            <h4 class="text-2xl font-bold text-red-600 mb-4">Desafíos Actuales (Post-Fase I)</h4>
+                            <ul class="space-y-3 text-slate-600">
+                                <li class="flex items-start"><i class="fas fa-exclamation-circle text-red-500 mr-3 mt-1"></i>Gestión de BBDD limitada por falta de roles y perfiles.</li>
+                                <li class="flex items-start"><i class="fas fa-exclamation-circle text-red-500 mr-3 mt-1"></i>Comunicación con proveedores por email, generando demoras.</li>
+                                <li class="flex items-start"><i class="fas fa-exclamation-circle text-red-500 mr-3 mt-1"></i>Sin almacenamiento de historial de conciliaciones.</li>
+                                <li class="flex items-start"><i class="fas fa-exclamation-circle text-red-500 mr-3 mt-1"></i>Errores recurrentes por números de lote que causan desgaste.</li>
+                                <li class="flex items-start"><i class="fas fa-exclamation-circle text-red-500 mr-3 mt-1"></i>Falta de indicadores (KPIs) para medir la exactitud del inventario.</li>
+                                <li class="flex items-start"><i class="fas fa-exclamation-circle text-red-500 mr-3 mt-1"></i>Plataforma limitada a Colombia y al idioma español.</li>
+                            </ul>
+                        </div>
+                        <div>
+                             <h4 class="text-2xl font-bold text-green-600 mb-4">Soluciones Propuestas (Fase II)</h4>
+                            <ul class="space-y-3 text-slate-600">
+                                <li class="flex items-start"><i class="fas fa-shield-alt text-green-500 mr-3 mt-1"></i>Acceso seguro con roles y perfiles por compañía.</li>
+                                <li class="flex items-start"><i class="fas fa-comments text-green-500 mr-3 mt-1"></i>Interfaz directa para proveedores que agiliza la comunicación.</li>
+                                <li class="flex items-start"><i class="fas fa-history text-green-500 mr-3 mt-1"></i>Visualización centralizada de historial de conciliaciones.</li>
+                                <li class="flex items-start"><i class="fas fa-brain text-green-500 mr-3 mt-1"></i>Sugerencias de conciliación con Agentes de IA para lotes.</li>
+                                <li class="flex items-start"><i class="fas fa-chart-line text-green-500 mr-3 mt-1"></i>Dashboard con KPIs de exactitud del inventario vs. conciliación.</li>
+                                <li class="flex items-start"><i class="fas fa-globe-americas text-green-500 mr-3 mt-1"></i>Soporte multilenguaje para una expansión global.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ROI Fase II -->
+        <section id="roi" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="scroll-reveal text-center max-w-3xl mx-auto">
+                    <h3 class="text-4xl font-bold mb-4">Proyección de ROI para la Fase II</h3>
+                    <p class="text-slate-600 mb-12">Al igual que la Fase I, la segunda fase está diseñada para generar un retorno de inversión tangible, enfocándose en nuevas áreas de optimización.</p>
+                </div>
+                <div class="bg-white p-8 md:p-12 rounded-xl shadow-lg max-w-5xl mx-auto border-t-4 border-indigo-500">
+                    <h4 class="text-2xl font-bold mb-6 text-center text-slate-800">Nuevas Oportunidades de Ahorro Anual</h4>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <!-- Ahorro 1 -->
+                        <div class="text-center">
+                            <p class="text-5xl font-bold gradient-text mb-2">~156 Horas</p>
+                            <p class="font-semibold text-lg text-slate-800">Ahorro en Carga Operativa</p>
+                            <p class="text-slate-600 mt-2">Estimamos un ahorro de 3 horas semanales al eliminar la gestión de emails con proveedores y la investigación manual de errores de lote, liberando al equipo para tareas de mayor valor.</p>
+                        </div>
+                        <!-- Ahorro 2 -->
+                        <div class="text-center">
+                             <p class="text-5xl font-bold gradient-text mb-2">+10%</p>
+                            <p class="font-semibold text-lg text-slate-800">Aumento en Exactitud de Inventario</p>
+                            <p class="text-slate-600 mt-2">La implementación de KPIs y la IA permitirá una gestión proactiva, reduciendo mermas y costos asociados a la inexactitud del inventario, con un impacto directo en la rentabilidad.</p>
+                        </div>
+                    </div>
+                    <div class="mt-10 pt-6 border-t border-slate-200 text-center">
+                        <p class="text-slate-700 font-semibold text-xl">La Fase II no es un gasto, es la siguiente inversión estratégica para la optimización y expansión global del negocio.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Roadmap (ACTUALIZADO) -->
+        <section id="roadmap" class="py-20 bg-white">
+             <div class="container mx-auto px-6">
+                <div class="scroll-reveal text-center max-w-3xl mx-auto mb-16">
+                    <h3 class="text-4xl font-bold mb-4">Roadmap de Entregas Tempranas (9 Meses)</h3>
+                    <p class="text-slate-600">Un plan de 9 meses con alcance total, entregando valor tangible cada 3 meses gracias a una dedicación de 30 horas semanales.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Entrega 1 -->
+                    <div class="scroll-reveal bg-white p-8 rounded-xl shadow-lg border-t-4 border-indigo-400 flex flex-col">
+                        <p class="font-bold text-indigo-600">ENTREGA 1 (Meses 1-3)</p>
+                        <h4 class="text-2xl font-bold text-slate-800 mt-2 mb-3">Núcleo de Seguridad y Expansión</h4>
+                        <ul class="list-disc list-inside space-y-2 text-slate-600 flex-grow">
+                            <li>Directorio Activo, Roles y Perfiles.</li>
+                            <li>Módulo de Administración (Usuarios y Cías).</li>
+                            <li>Soporte Multilenguaje.</li>
+                        </ul>
+                        <p class="font-semibold text-indigo-600 mt-4">Resultado: Plataforma segura y lista para escalar.</p>
+                    </div>
+                    <!-- Entrega 2 -->
+                    <div class="scroll-reveal bg-white p-8 rounded-xl shadow-lg border-t-4 border-indigo-500 flex flex-col" style="transition-delay: 150ms;">
+                        <p class="font-bold text-indigo-600">ENTREGA 2 (Meses 4-6)</p>
+                        <h4 class="text-2xl font-bold text-slate-800 mt-2 mb-3">Ecosistema de Proveedores</h4>
+                        <ul class="list-disc list-inside space-y-2 text-slate-600 flex-grow">
+                            <li>API de transacciones con proveedores.</li>
+                            <li>Portal de carga de información.</li>
+                            <li>Historial de conciliaciones.</li>
+                            <li>Módulo de Notificaciones.</li>
+                        </ul>
+                        <p class="font-semibold text-indigo-600 mt-4">Resultado: Eliminación de emails y 100% trazabilidad.</p>
+                    </div>
+                    <!-- Entrega 3 -->
+                    <div class="scroll-reveal bg-white p-8 rounded-xl shadow-lg border-t-4 border-indigo-600 flex flex-col" style="transition-delay: 300ms;">
+                        <p class="font-bold text-indigo-600">ENTREGA 3 (Meses 7-9)</p>
+                        <h4 class="text-2xl font-bold text-slate-800 mt-2 mb-3">Inteligencia y Optimización</h4>
+                        <ul class="list-disc list-inside space-y-2 text-slate-600 flex-grow">
+                            <li>Agente de IA para sugerir conciliaciones.</li>
+                            <li>Dashboard de KPIs (Exactitud de Inventario).</li>
+                            <li>Panel de comunicaciones.</li>
+                            <li>Herramienta Demo.</li>
+                        </ul>
+                        <p class="font-semibold text-indigo-600 mt-4">Resultado: Plataforma inteligente y proactiva.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section id="cta" class="py-20 bg-indigo-700 text-white">
+            <div class="container mx-auto px-6 text-center">
+                <div class="scroll-reveal">
+                    <h3 class="text-4xl font-bold mb-4">¿Listos para la Evolución?</h3>
+                    <p class="text-indigo-200 max-w-2xl mx-auto mb-8">Esta propuesta está diseñada para ofrecer el máximo valor y transparencia. Estamos listos para comenzar y llevar RAIOS al siguiente nivel.</p>
+                    <button class="bg-white text-indigo-700 font-bold py-3 px-8 rounded-full text-lg hover:bg-indigo-100 transition-transform hover:scale-105">Aprobar Proyecto Fase II</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-800 text-slate-400 py-6">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 RAIOS. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Script para animaciones de scroll
+        const scrollElements = document.querySelectorAll('.scroll-reveal');
+        const elementInView = (el, dividend = 1) => {
+            const elementTop = el.getBoundingClientRect().top;
+            return (elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend);
+        };
+        const displayScrollElement = (element) => { element.classList.add('visible'); };
+        const handleScrollAnimation = () => {
+            scrollElements.forEach((el) => {
+                if (elementInView(el, 1.25)) { displayScrollElement(el); }
+            });
+        }
+        window.addEventListener('scroll', handleScrollAnimation);
+        handleScrollAnimation();
+    </script>
+</body>
+</html>
