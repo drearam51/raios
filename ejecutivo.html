@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumen Ejecutivo - RAIOS FASE II</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f1f5f9; /* slate-100 */
+            color: #0f172a; /* slate-900 */
+            /* Forzar altura mínima para simular formato de hoja/pantalla completa */
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .bento-card {
+            background-color: white;
+            border-radius: 1rem; /* rounded-2xl */
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border: 1px solid #e2e8f0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .indicator-pill {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <!-- Header Section -->
+    <header class="flex justify-between items-center mb-6">
+        <div>
+            <div class="flex items-center gap-3">
+                <div class="bg-indigo-600 text-white p-2 rounded-lg">
+                    <i class="fas fa-bolt text-xl"></i>
+                </div>
+                <h1 class="text-3xl font-black text-slate-800 tracking-tight">RAIOS <span class="text-indigo-600">FASE II</span></h1>
+            </div>
+            <p class="text-slate-500 font-medium mt-1 ml-1">Evolución Estratégica: De Herramienta Local a Plataforma Global Inteligente</p>
+        </div>
+        <div class="text-right hidden sm:block">
+            <p class="text-sm text-slate-400 font-semibold uppercase tracking-wider">Fecha de Propuesta</p>
+            <p class="text-lg font-bold text-slate-700">Octubre 2025</p>
+        </div>
+    </header>
+
+    <!-- Main Grid Layout (Dashboard) -->
+    <main class="grid grid-cols-1 md:grid-cols-12 gap-6 flex-grow">
+
+        <!-- COLUMNA 1: CONTEXTO Y PROBLEMA (30% ancho) -->
+        <div class="md:col-span-4 flex flex-col gap-6">
+            
+            <!-- Card: Éxito Previo (Validación) -->
+            <div class="bento-card border-l-4 border-l-green-500">
+                <div class="flex justify-between items-start mb-4">
+                    <h2 class="text-lg font-bold text-slate-700">Tracción Fase I</h2>
+                    <span class="indicator-pill bg-green-100 text-green-700">Validado</span>
+                </div>
+                <div class="flex items-center justify-between mb-2">
+                    <span class="text-slate-500 text-sm">Tiempo Ejecución</span>
+                    <span class="font-bold text-green-600 text-xl"><i class="fas fa-arrow-down text-sm mr-1"></i>98%</span>
+                </div>
+                <p class="text-xs text-slate-400 mb-4">Reducción de 3 días a 30 min.</p>
+                <p class="text-sm text-slate-600 leading-snug">
+                    La Fase I demostró que la automatización genera un ROI inmediato. RAIOS es hoy una herramienta crítica, pero opera de forma aislada y manual en la comunicación externa.
+                </p>
+            </div>
+
+            <!-- Card: El Problema / Oportunidad -->
+            <div class="bento-card border-l-4 border-l-orange-400 flex-grow">
+                <div class="flex justify-between items-start mb-4">
+                    <h2 class="text-lg font-bold text-slate-700">Desafíos Actuales</h2>
+                    <span class="indicator-pill bg-orange-100 text-orange-700">Riesgos</span>
+                </div>
+                <ul class="space-y-3">
+                    <li class="flex items-start gap-3">
+                        <div class="bg-red-50 p-1.5 rounded text-red-500 mt-0.5"><i class="fas fa-envelope text-xs"></i></div>
+                        <div>
+                            <p class="text-sm font-bold text-slate-700">Dependencia de Emails</p>
+                            <p class="text-xs text-slate-500">Gestión manual con proveedores genera demoras y pérdida de trazabilidad.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <div class="bg-red-50 p-1.5 rounded text-red-500 mt-0.5"><i class="fas fa-database text-xs"></i></div>
+                        <div>
+                            <p class="text-sm font-bold text-slate-700">Data Aislada</p>
+                            <p class="text-xs text-slate-500">Sin historial centralizado ni métricas (KPIs) de exactitud.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <div class="bg-red-50 p-1.5 rounded text-red-500 mt-0.5"><i class="fas fa-globe text-xs"></i></div>
+                        <div>
+                            <p class="text-sm font-bold text-slate-700">Límite de Escala</p>
+                            <p class="text-xs text-slate-500">Falta de roles, seguridad y multilenguaje impide la expansión global.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- COLUMNA 2: ESTRATEGIA Y ROADMAP (40% ancho) -->
+        <div class="md:col-span-5 flex flex-col gap-6">
+            
+            <!-- Card principal: El Plan -->
+            <div class="bento-card border-t-4 border-t-indigo-600">
+                <h2 class="text-lg font-bold text-slate-700 mb-1">Estrategia de Ejecución (9 Meses)</h2>
+                <p class="text-xs text-slate-500 mb-6">Desarrollo ágil con entregas de valor cada 3 meses.</p>
+
+                <div class="relative border-l-2 border-indigo-100 ml-3 space-y-8 pb-2">
+                    <!-- Hito 1 -->
+                    <div class="relative pl-6">
+                        <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-indigo-600 border-2 border-white"></div>
+                        <div class="flex justify-between items-center mb-1">
+                            <h3 class="font-bold text-indigo-700">Hito 1: Seguridad y Escala</h3>
+                            <span class="text-xs font-bold bg-slate-100 px-2 py-1 rounded">Mes 1-3</span>
+                        </div>
+                        <p class="text-xs text-slate-600 mb-2">Fundación sólida para el crecimiento.</p>
+                        <ul class="text-xs text-slate-500 list-disc list-inside">
+                            <li>Directorio Activo & Roles (Seguridad).</li>
+                            <li>Soporte Multilenguaje (Globalización).</li>
+                        </ul>
+                    </div>
+
+                    <!-- Hito 2 -->
+                    <div class="relative pl-6">
+                        <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-indigo-400 border-2 border-white"></div>
+                        <div class="flex justify-between items-center mb-1">
+                            <h3 class="font-bold text-indigo-700">Hito 2: Ecosistema Proveedores</h3>
+                            <span class="text-xs font-bold bg-slate-100 px-2 py-1 rounded">Mes 4-6</span>
+                        </div>
+                        <p class="text-xs text-slate-600 mb-2">Eliminación de la gestión manual por email.</p>
+                        <ul class="text-xs text-slate-500 list-disc list-inside">
+                            <li>Portal de Carga para Proveedores.</li>
+                            <li>Historial y Trazabilidad 100%.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Hito 3 -->
+                    <div class="relative pl-6">
+                        <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-indigo-300 border-2 border-white"></div>
+                        <div class="flex justify-between items-center mb-1">
+                            <h3 class="font-bold text-indigo-700">Hito 3: Inteligencia (IA)</h3>
+                            <span class="text-xs font-bold bg-slate-100 px-2 py-1 rounded">Mes 7-9</span>
+                        </div>
+                        <p class="text-xs text-slate-600 mb-2">Optimización proactiva del negocio.</p>
+                        <ul class="text-xs text-slate-500 list-disc list-inside">
+                            <li>Agente IA para sugerencias de conciliación.</li>
+                            <li>Dashboard Ejecutivo de KPIs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- COLUMNA 3: RECURSOS Y ROI (30% ancho) -->
+        <div class="md:col-span-3 flex flex-col gap-6">
+
+            <!-- Estructura Operativa (Reemplaza a Costos) -->
+            <div class="bento-card bg-slate-800 text-white border-none">
+                <div class="flex items-center gap-2 mb-4">
+                    <i class="fas fa-users-cog text-indigo-400"></i>
+                    <h2 class="text-sm font-bold text-white uppercase tracking-wide">Estructura Operativa</h2>
+                </div>
+                
+                <div class="space-y-4">
+                    <div>
+                        <p class="text-xs text-slate-400 uppercase font-semibold">Recurso Clave</p>
+                        <p class="text-lg font-bold text-white">Desarrollador Senior</p>
+                        <p class="text-xs text-indigo-200">Full-Stack + QA + DevOps</p>
+                    </div>
+                    
+                    <div class="flex justify-between items-end border-b border-slate-700 pb-4">
+                        <div>
+                            <p class="text-xs text-slate-400 uppercase font-semibold">Dedicación</p>
+                            <p class="text-xl font-bold text-white">30 h<span class="text-sm text-slate-400 font-normal">/sem</span></p>
+                        </div>
+                        <div class="text-right">
+                             <p class="text-xs text-slate-400 uppercase font-semibold">Duración</p>
+                            <p class="text-xl font-bold text-white">9 <span class="text-sm text-slate-400 font-normal">Meses</span></p>
+                        </div>
+                    </div>
+                    
+                    <div>
+                         <p class="text-xs text-slate-400 uppercase font-semibold mb-1">Infraestructura</p>
+                         <div class="flex gap-2">
+                             <span class="bg-slate-700 text-xs px-2 py-1 rounded text-white">Azure Cloud</span>
+                             <span class="bg-slate-700 text-xs px-2 py-1 rounded text-white">AI Services</span>
+                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ROI / Retorno -->
+            <div class="bento-card bg-indigo-50 border-indigo-100 flex-grow">
+                <div class="flex items-center gap-2 mb-3">
+                    <i class="fas fa-chart-line text-indigo-600"></i>
+                    <h2 class="text-lg font-bold text-indigo-900">Retorno (ROI)</h2>
+                </div>
+                
+                <div class="mb-4">
+                    <p class="text-3xl font-bold text-indigo-700">~156 h</p>
+                    <p class="text-xs text-indigo-600 font-medium">Ahorro Operativo Anual</p>
+                    <p class="text-[10px] text-slate-500 mt-1">Eliminación de gestión manual.</p>
+                </div>
+                
+                <div>
+                    <p class="text-3xl font-bold text-green-600">+10%</p>
+                    <p class="text-xs text-green-700 font-medium">Exactitud de Inventario</p>
+                    <p class="text-[10px] text-slate-500 mt-1">Menores mermas gracias a IA.</p>
+                </div>
+            </div>
+
+            <!-- Botón / Estado -->
+            <div class="mt-auto">
+                <div class="bg-white border-2 border-dashed border-slate-300 rounded-xl p-4 text-center">
+                    <p class="text-sm font-bold text-slate-500 mb-2">Decisión Comité</p>
+                    <div class="flex gap-2 justify-center">
+                        <div class="w-4 h-4 rounded-full bg-slate-200"></div>
+                        <div class="w-4 h-4 rounded-full bg-slate-200"></div>
+                        <div class="w-4 h-4 rounded-full bg-slate-200"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="mt-8 text-center border-t border-slate-200 pt-4">
+        <p class="text-xs text-slate-400">Propuesta Confidencial de Desarrollo de Software - RAIOS FASE II</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Informe Ejecutivo - RAIOS FASE II</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Configuración para Impresión Tamaño Carta Horizontal */
+        @page {
+            size: letter landscape;
+            margin: 0;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f3f4f6;
+            color: #333;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        /* Colores Corporativos */
+        :root {
+            --brand-color: #214da0;
+            --brand-light: #eef4ff;
+        }
+
+        /* Contenedor principal fijo para simular la hoja */
+        .sheet {
+            width: 11in;
+            min-height: 8.5in;
+            background: white;
+            padding: 0.4in;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header Ejecutivo */
+        .brand-header {
+            border-bottom: 3px solid var(--brand-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .section-title {
+            color: var(--brand-color);
+            font-size: 0.85rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border-bottom: 1px solid #e5e7eb;
+            padding-bottom: 6px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Tablas */
+        .exec-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .exec-table th {
+            background-color: var(--brand-color);
+            color: white;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            font-weight: 600;
+            padding: 6px 8px;
+            text-align: left;
+        }
+        .exec-table td {
+            padding: 8px;
+            font-size: 0.75rem;
+            border-bottom: 1px solid #eef2f6;
+            color: #4b5563;
+        }
+        .exec-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* KPIs Cards */
+        .kpi-box {
+            background-color: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            padding: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+        .kpi-box::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background-color: var(--brand-color);
+        }
+
+        /* NUEVO: Phase Dashboard Strips */
+        .phase-strip {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 10px 15px;
+            margin-bottom: 10px;
+            transition: all 0.2s;
+        }
+        .phase-strip:hover {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border-color: var(--brand-color);
+        }
+        .strip-header {
+            width: 20%;
+            border-right: 1px solid #e2e8f0;
+            padding-right: 15px;
+        }
+        .strip-content {
+            width: 45%;
+            padding: 0 20px;
+        }
+        .strip-metrics {
+            width: 35%;
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+        }
+        .metric-pill {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 6px 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.7rem;
+            flex: 1;
+        }
+        .metric-icon-box {
+            width: 24px;
+            height: 24px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+        }
+
+        /* Utilidades de Impresión */
+        @media print {
+            body { background: white; padding: 0; }
+            .sheet { box-shadow: none; margin: 0; width: 100%; height: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sheet">
+        
+        <!-- HEADER -->
+        <header class="brand-header">
+            <div>
+                <h1 class="text-3xl font-black text-[#214da0] tracking-tight leading-none">RAIOS <span class="text-slate-400 font-light">FASE II</span></h1>
+                <p class="text-xs text-slate-500 font-bold uppercase mt-2 tracking-widest">Executive Status Report • Oct 2025</p>
+            </div>
+            <div class="flex gap-6 text-right">
+                <div>
+                    <span class="block text-[10px] text-slate-400 uppercase font-bold">Project Sponsor</span>
+                    <span class="text-sm font-bold text-slate-700">Comité Ejecutivo</span>
+                </div>
+                <div>
+                    <span class="block text-[10px] text-slate-400 uppercase font-bold">Overall Status</span>
+                    <span class="inline-flex items-center gap-1 bg-[#214da0] text-white px-3 py-0.5 rounded-full text-xs font-bold mt-0.5">
+                        VALIDADO
+                    </span>
+                </div>
+            </div>
+        </header>
+
+        <!-- CONTENIDO SUPERIOR (RESUMEN + FINANZAS) -->
+        <div class="grid grid-cols-12 gap-6 mb-6">
+
+            <!-- COLUMNA IZQUIERDA: ESTRATEGIA (7 Cols) -->
+            <div class="col-span-7 flex flex-col gap-4">
+                <section>
+                    <h3 class="section-title">
+                        <i class="fas fa-bullseye"></i> Executive Summary
+                    </h3>
+                    <p class="text-sm text-slate-600 leading-relaxed text-justify mb-4">
+                        La Fase II establece un nuevo estándar de <strong>Gobernanza de Proveedores</strong>. Mediante un Portal Web y API, estandarizamos la entrada de datos desde el origen. Operativamente, implementamos IA de <strong>Emparejamiento Difuso</strong> para corregir errores en Lotes y un <strong>Vendor Scorecard</strong> para calificar el desempeño de cada proveedor.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="kpi-box">
+                            <p class="text-[10px] uppercase font-bold text-slate-400">Eficiencia Tiempos</p>
+                            <p class="text-2xl font-black text-[#214da0] mt-1">-85%</p>
+                            <p class="text-[10px] text-slate-500">En gestión de discrepancias</p>
+                        </div>
+                        <div class="kpi-box">
+                            <p class="text-[10px] uppercase font-bold text-slate-400">Impacto Financiero</p>
+                            <p class="text-2xl font-black text-green-600 mt-1">$23.4 M</p>
+                            <p class="text-[10px] text-slate-500">Ahorro Anual (COP)</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- COLUMNA DERECHA: FINANZAS (5 Cols) -->
+            <div class="col-span-5 flex flex-col gap-4">
+                <section>
+                    <h3 class="section-title text-red-600 border-red-100" style="color: #214da0;">
+                        <i class="fas fa-chart-line"></i> Financial Efficiency
+                    </h3>
+                    <div class="bg-slate-50 border border-slate-200 rounded-lg p-3">
+                        <table class="w-full text-sm mb-1">
+                            <thead class="text-xs text-slate-400 border-b border-slate-200">
+                                <tr>
+                                    <th class="text-left pb-1 font-semibold">Rol</th>
+                                    <th class="text-center pb-1 font-semibold">Hrs/Sem</th>
+                                    <th class="text-right pb-1 font-semibold">Ahorro COP</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-slate-700">
+                                <tr>
+                                    <td class="py-1">2 Coord. (A)</td>
+                                    <td class="text-center py-1 text-xs">3h</td>
+                                    <td class="text-right py-1 font-mono text-xs">$390,000</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-1">3 Coord. (B)</td>
+                                    <td class="text-center py-1 text-xs">8h</td>
+                                    <td class="text-right py-1 font-mono text-xs">$1,560,000</td>
+                                </tr>
+                                <tr class="border-t border-slate-300 font-bold text-[#214da0]">
+                                    <td class="pt-1 text-xs">TOTAL MES</td>
+                                    <td class="text-center pt-1 text-xs">30h</td>
+                                    <td class="text-right pt-1 font-mono text-xs">$1.95 M</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                
+                <section>
+                     <div class="bg-[#214da0] text-white rounded-lg p-3 shadow-lg flex justify-between items-center">
+                        <div>
+                            <p class="text-[10px] uppercase font-bold text-blue-200">Inversión Total</p>
+                            <p class="text-2xl font-black tracking-tight">$38,000 <span class="text-xs font-normal">USD</span></p>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-[10px] uppercase font-bold text-blue-200">ROI Proyectado</p>
+                            <p class="text-sm font-bold">< 18 Meses</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- NUEVA SECCIÓN INFERIOR: DASHBOARD DE FASES HORIZONTALES -->
+        <section class="flex-grow flex flex-col justify-end">
+            <h3 class="section-title">
+                <i class="fas fa-layer-group"></i> Evolución de Valor por Fase (Impacto Directo)
+            </h3>
+            
+            <div class="flex flex-col gap-3">
+                
+                <!-- FASE 1 ROW -->
+                <div class="phase-strip border-l-4 border-l-slate-400">
+                    <div class="strip-header">
+                        <div class="text-xs font-black text-slate-400 uppercase">Fase 1: Núcleo</div>
+                        <div class="text-[10px] font-bold bg-slate-100 text-slate-500 inline-block px-2 py-0.5 rounded mt-1">Mes 1-3</div>
+                    </div>
+                    <div class="strip-content">
+                        <p class="text-sm font-bold text-slate-700 mb-1">Control de Accesos & Multilenguaje</p>
+                        <p class="text-xs text-slate-500">Fundación de seguridad y escalabilidad global para la plataforma.</p>
+                    </div>
+                    <div class="strip-metrics">
+                        <div class="metric-pill">
+                            <div class="metric-icon-box bg-slate-200 text-slate-600"><i class="fas fa-user-shield"></i></div>
+                            <div>
+                                <p class="text-[9px] text-slate-400 font-bold uppercase">Riesgo</p>
+                                <p class="text-xs font-bold text-slate-700">Mitigado</p>
+                            </div>
+                        </div>
+                        <div class="metric-pill">
+                            <div class="metric-icon-box bg-slate-200 text-slate-600"><i class="fas fa-users-cog"></i></div>
+                            <div>
+                                <p class="text-[9px] text-slate-400 font-bold uppercase">Roles</p>
+                                <p class="text-xs font-bold text-slate-700">Centralizado</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FASE 2 ROW -->
+                <div class="phase-strip border-l-4 border-l-blue-500">
+                    <div class="strip-header">
+                        <div class="text-xs font-black text-blue-600 uppercase">Fase 2: Conexión</div>
+                        <div class="text-[10px] font-bold bg-blue-50 text-blue-600 inline-block px-2 py-0.5 rounded mt-1">Mes 4-6</div>
+                    </div>
+                    <div class="strip-content">
+                        <p class="text-sm font-bold text-slate-700 mb-1">Portal de Autogestión</p>
+                        <p class="text-xs text-slate-500">Datos limpios desde el origen (Proveedor) mediante API/Web.</p>
+                    </div>
+                    <div class="strip-metrics">
+                        <div class="metric-pill border-blue-100 bg-blue-50/50">
+                            <div class="metric-icon-box bg-blue-100 text-blue-600"><i class="fas fa-envelope-open-text"></i></div>
+                            <div>
+                                <p class="text-[9px] text-blue-400 font-bold uppercase">Emails</p>
+                                <p class="text-xs font-bold text-blue-700">-100% (Eliminado)</p>
+                            </div>
+                        </div>
+                        <div class="metric-pill border-blue-100 bg-blue-50/50">
+                            <div class="metric-icon-box bg-blue-100 text-blue-600"><i class="fas fa-stopwatch"></i></div>
+                            <div>
+                                <p class="text-[9px] text-blue-400 font-bold uppercase">Carga Admin</p>
+                                <p class="text-xs font-bold text-blue-700">-60% Tiempos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FASE 3 ROW -->
+                <div class="phase-strip border-l-4 border-l-[#214da0] bg-indigo-50/30">
+                    <div class="strip-header">
+                        <div class="text-xs font-black text-[#214da0] uppercase">Fase 3: Inteligencia</div>
+                        <div class="text-[10px] font-bold bg-[#eef4ff] text-[#214da0] inline-block px-2 py-0.5 rounded mt-1">Mes 7-9</div>
+                    </div>
+                    <div class="strip-content">
+                        <p class="text-sm font-bold text-slate-700 mb-1">Fuzzy AI & Scorecard</p>
+                        <p class="text-xs text-slate-500">Cruce inteligente de lotes y calificación de desempeño.</p>
+                    </div>
+                    <div class="strip-metrics">
+                        <div class="metric-pill border-indigo-100 bg-white">
+                            <div class="metric-icon-box bg-[#214da0] text-white"><i class="fas fa-magic"></i></div>
+                            <div>
+                                <p class="text-[9px] text-indigo-400 font-bold uppercase">Conciliación</p>
+                                <p class="text-xs font-bold text-[#214da0]">-85% Tiempos</p>
+                            </div>
+                        </div>
+                        <div class="metric-pill border-indigo-100 bg-white">
+                            <div class="metric-icon-box bg-green-500 text-white"><i class="fas fa-chart-line"></i></div>
+                            <div>
+                                <p class="text-[9px] text-green-600 font-bold uppercase">Mermas</p>
+                                <p class="text-xs font-bold text-green-700">Minimizado</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="mt-4 border-t border-slate-200 pt-3 flex justify-between text-[9px] text-slate-400 uppercase font-medium">
+            <span>RAIOS Platform Phase II</span>
+            <span>Confidential Document</span>
+            <span>Page 1 of 1</span>
+        </footer>
+
+    </div>
+
+</body>
+</html>
+```

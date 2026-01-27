@@ -1,0 +1,31 @@
+.editable-cell {
+  width: 100%;
+  min-height: 2rem;
+  padding: 0.5rem;
+  cursor: text;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  transition: all 0.2s;
+  word-break: break-word;
+}
+
+.editable-cell:hover {
+  background-color: #f8f9fa;
+  border-color: #dee2e6;
+}
+
+.editable-cell-placeholder {
+  color: #adb5bd;
+  font-style: italic;
+}
+
+.editable-cell-input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 2px solid #667eea;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  outline: none;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}

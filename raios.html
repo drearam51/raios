@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Informe Ejecutivo - RAIOS FASE II</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Configuración para Impresión Tamaño Carta Horizontal */
+        @page {
+            size: letter landscape;
+            margin: 0; /* Márgenes manejados por el contenedor para control total */
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f3f4f6; /* Fondo gris muy suave para contraste en pantalla */
+            color: #333;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        /* Colores Corporativos */
+        :root {
+            --brand-color: #214da0;
+            --brand-light: #eef4ff;
+        }
+
+        /* Contenedor principal fijo para simular la hoja */
+        .sheet {
+            width: 11in; /* Ancho carta landscape */
+            height: 8.5in; /* Alto carta landscape */
+            background: white;
+            padding: 0.5in;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header Ejecutivo */
+        .brand-header {
+            border-bottom: 3px solid var(--brand-color);
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .section-title {
+            color: var(--brand-color);
+            font-size: 0.9rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border-bottom: 1px solid #e5e7eb;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Tablas */
+        .exec-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .exec-table th {
+            background-color: var(--brand-color);
+            color: white;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            font-weight: 600;
+            padding: 8px 10px;
+            text-align: left;
+        }
+        .exec-table td {
+            padding: 10px;
+            font-size: 0.8rem;
+            border-bottom: 1px solid #eef2f6;
+            color: #4b5563;
+        }
+        .exec-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* KPIs Cards */
+        .kpi-box {
+            background-color: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            padding: 12px;
+            position: relative;
+            overflow: hidden;
+        }
+        .kpi-box::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background-color: var(--brand-color);
+        }
+
+        /* Utilidades de Impresión */
+        @media print {
+            body { background: white; padding: 0; }
+            .sheet { box-shadow: none; margin: 0; width: 100%; height: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sheet">
+        
+        <!-- HEADER -->
+        <header class="brand-header">
+            <div>
+                <h1 class="text-3xl font-black text-[#214da0] tracking-tight leading-none">RAIOS <span class="text-slate-400 font-light">FASE II</span></h1>
+                <p class="text-xs text-slate-500 font-bold uppercase mt-2 tracking-widest">Executive Status Report • Oct 2025</p>
+            </div>
+            <div class="flex gap-6 text-right">
+                <div>
+                    <span class="block text-[10px] text-slate-400 uppercase font-bold">Project Sponsor</span>
+                    <span class="text-sm font-bold text-slate-700">Comité Ejecutivo</span>
+                </div>
+                <div>
+                    <span class="block text-[10px] text-slate-400 uppercase font-bold">Overall Status</span>
+                    <span class="inline-flex items-center gap-1 bg-[#214da0] text-white px-3 py-0.5 rounded-full text-xs font-bold mt-0.5">
+                        VALIDADO
+                    </span>
+                </div>
+            </div>
+        </header>
+
+        <!-- CONTENIDO GRID -->
+        <div class="grid grid-cols-12 gap-8 h-full">
+
+            <!-- COLUMNA IZQUIERDA: ESTRATEGIA (7 Cols) -->
+            <div class="col-span-7 flex flex-col gap-6">
+                
+                <!-- 1. Executive Summary -->
+                <section>
+                    <h3 class="section-title">
+                        <i class="fas fa-bullseye"></i> Executive Summary
+                    </h3>
+                    <p class="text-sm text-slate-600 leading-relaxed text-justify mb-4">
+                        La Fase II transforma RAIOS en una plataforma inteligente global. Mediante la centralización de proveedores y un <strong>Agente de IA</strong> para validación, reducimos la carga manual y eliminamos discrepancias de inventario.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="kpi-box">
+                            <p class="text-[10px] uppercase font-bold text-slate-400">Eficiencia Tiempos</p>
+                            <p class="text-2xl font-black text-[#214da0] mt-1">-85%</p>
+                            <p class="text-[10px] text-slate-500">En gestión de discrepancias</p>
+                        </div>
+                        <div class="kpi-box">
+                            <p class="text-[10px] uppercase font-bold text-slate-400">Impacto Financiero</p>
+                            <p class="text-2xl font-black text-green-600 mt-1">$23.4 M</p>
+                            <p class="text-[10px] text-slate-500">Ahorro Anual (COP)</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 2. Roadmap / Hitos -->
+                <section class="flex-grow">
+                    <h3 class="section-title">
+                        <i class="fas fa-map-signs"></i> Project Roadmap (9 Months)
+                    </h3>
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <table class="exec-table">
+                            <thead>
+                                <tr>
+                                    <th style="width: 40%">Fase / Entregable</th>
+                                    <th style="width: 25%">Cronograma</th>
+                                    <th>Impacto Clave</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="font-bold text-[#214da0]">1. Núcleo & Seguridad</span></td>
+                                    <td class="text-xs font-mono">Mes 1-3</td>
+                                    <td class="text-xs">Control de accesos (Roles) y Multilenguaje.</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="font-bold text-[#214da0]">2. Portal Proveedores</span></td>
+                                    <td class="text-xs font-mono">Mes 4-6</td>
+                                    <td class="text-xs">Eliminación 100% de emails en gestión.</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="font-bold text-[#214da0]">3. Inteligencia IA</span></td>
+                                    <td class="text-xs font-mono">Mes 7-9</td>
+                                    <td class="text-xs">Agente de Validación y Dashboard KPI.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- COLUMNA DERECHA: FINANZAS (5 Cols) -->
+            <div class="col-span-5 flex flex-col gap-6">
+
+                <!-- 3. Key Efficiency (Cost Table) -->
+                <section>
+                    <h3 class="section-title text-red-600 border-red-100" style="color: #214da0;">
+                        <i class="fas fa-chart-line"></i> Financial Efficiency Model
+                    </h3>
+                    <div class="bg-slate-50 border border-slate-200 rounded-lg p-4">
+                        <p class="text-[10px] text-slate-500 mb-3 uppercase font-bold tracking-wide">
+                            Validación: Ahorro en Nómina
+                        </p>
+                        <table class="w-full text-sm mb-2">
+                            <thead class="text-xs text-slate-400 border-b border-slate-200">
+                                <tr>
+                                    <th class="text-left pb-2 font-semibold">Rol</th>
+                                    <th class="text-center pb-2 font-semibold">Hrs/Sem</th>
+                                    <th class="text-right pb-2 font-semibold">Ahorro COP</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-slate-700">
+                                <tr>
+                                    <td class="py-2">2 Coord. (A)</td>
+                                    <td class="text-center py-2 text-xs">3h</td>
+                                    <td class="text-right py-2 font-mono text-xs">$390,000</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2">3 Coord. (B)</td>
+                                    <td class="text-center py-2 text-xs">8h</td>
+                                    <td class="text-right py-2 font-mono text-xs">$1,560,000</td>
+                                </tr>
+                                <tr class="border-t border-slate-300 font-bold text-[#214da0]">
+                                    <td class="pt-2">TOTAL MES</td>
+                                    <td class="text-center pt-2">30h</td>
+                                    <td class="text-right pt-2 font-mono">$1.95 M</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- 4. Budget & ROI -->
+                <section class="flex-grow flex flex-col">
+                    <h3 class="section-title">
+                        <i class="fas fa-coins"></i> Investment & ROI
+                    </h3>
+                    
+                    <div class="bg-[#214da0] text-white rounded-lg p-5 flex-grow flex flex-col justify-between shadow-lg">
+                        <div>
+                            <p class="text-[10px] uppercase font-bold text-blue-200 mb-1">Inversión Fija (Total)</p>
+                            <div class="flex items-baseline gap-2">
+                                <span class="text-4xl font-black tracking-tight">$38,000</span>
+                                <span class="text-sm font-medium text-blue-200">USD</span>
+                            </div>
+                            <p class="text-xs text-blue-100 mt-2 border-t border-blue-500/50 pt-2">
+                                Desarrollo Full-Stack Senior + QA + DevOps (9 Meses)
+                            </p>
+                        </div>
+                        
+                        <div class="mt-4 bg-white/10 rounded p-3 backdrop-blur-sm">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="text-xs font-bold text-white">ROI Proyectado</span>
+                                <i class="fas fa-arrow-up text-green-300 text-xs"></i>
+                            </div>
+                            <p class="text-[10px] text-blue-100 leading-tight">
+                                El ahorro operativo ($23.4M COP/año) + la reducción de mermas (IA) recuperan la inversión en < 18 meses.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="absolute bottom-6 left-12 right-12 border-t border-slate-200 pt-3 flex justify-between text-[9px] text-slate-400 uppercase font-medium">
+            <span>RAIOS Platform Phase II</span>
+            <span>Confidential Document</span>
+            <span>Page 1 of 1</span>
+        </footer>
+
+    </div>
+
+</body>
+</html>
+```eof
