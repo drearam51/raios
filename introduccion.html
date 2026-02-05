@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>RAIOS Fase II – Introducción</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    @page { size: letter landscape; margin: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f3f4f6;
+      display: flex;
+      justify-content: center;
+      padding: 24px;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    :root { --brand: #214da0; }
+
+    .sheet {
+      width: 11in;
+      min-height: 8.5in;
+      background: white;
+      padding: 0.5in;
+      box-shadow: 0 10px 25px rgba(0,0,0,.1);
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(to right, #4f46e5, #0ea5e9);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="sheet">
+
+  <!-- Mismo header que ejecutivoia -->
+  <header class="flex justify-between items-end border-b-4 pb-3" style="border-color:#214da0">
+    <div>
+      <h1 class="text-3xl font-black text-[#214da0]">
+        RAIOS <span class="text-slate-400 font-light">FASE II</span>
+      </h1>
+      <p class="text-xs text-slate-500 font-bold uppercase tracking-widest mt-1">
+        Introducción · Propuesta Estratégica
+      </p>
+    </div>
+    <span class="bg-[#214da0] text-white px-4 py-1 rounded-full text-xs font-bold">
+      PROPUESTA ESTRATÉGICA
+    </span>
+  </header>
+
+  <!-- Hero: RAIOS Fase II - La Próxima Evolución -->
+  <section class="flex items-center justify-center py-6 flex-shrink-0">
+    <div class="text-center px-6 max-w-4xl mx-auto">
+      <h2 class="text-4xl md:text-5xl font-black mb-4">
+        <span class="gradient-text">RAIOS Fase II:</span> La Próxima Evolución
+      </h2>
+      <p class="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
+        Una propuesta estratégica para transformar RAIOS en una plataforma global, escalable e inteligente, capitalizando el éxito rotundo de la Fase I.
+      </p>
+    </div>
+  </section>
+
+  <!-- Evolución del Proceso -->
+  <section class="flex flex-col gap-4 flex-1 min-h-0">
+    <div class="text-center flex-shrink-0">
+      <h3 class="text-2xl font-bold text-slate-800 mb-2">Evolución del Proceso</h3>
+      <p class="text-sm text-slate-600 max-w-3xl mx-auto">
+        Un vistazo a la arquitectura de procesos y cómo RAIOS ha transformado el flujo de trabajo, desde un proceso manual (Pre-2019) hasta la visión de la Fase II.
+      </p>
+    </div>
+    <div class="bg-white p-4 rounded-xl border border-slate-200 flex-1 min-h-0 flex items-center justify-center overflow-hidden">
+      <img src="images/evolucion.png" alt="Diagrama de evolución del proceso RAIOS" class="w-full h-full object-contain rounded-lg">
+    </div>
+  </section>
+
+  <!-- Footer ejecutivo (ligero) -->
+  <footer class="border-t border-slate-200 pt-3 flex justify-center">
+    <p class="text-xs text-slate-400">Documento confidencial · RAIOS Fase II</p>
+  </footer>
+
+</div>
+
+</body>
+</html>
